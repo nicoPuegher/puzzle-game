@@ -1,3 +1,5 @@
+import identifySelector from './identifySelector.js';
+
 const form = document.querySelector('form');
 const inputs = document.querySelectorAll('.mode__check, .size__check');
 const startBtn = document.querySelector('.form__submit');
@@ -16,7 +18,7 @@ const settings = () => {
   selectors.forEach((selector) => {
     selector.addEventListener('click', (event) => {
       event.preventDefault();
-      // identify selector here
+      identifySelector(event.target);
     });
   });
 
