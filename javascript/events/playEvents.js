@@ -1,3 +1,5 @@
+import settings from '../settings/settings.js';
+
 const playBtns = document.querySelectorAll('.play');
 
 const playEvents = () => {
@@ -5,7 +7,7 @@ const playEvents = () => {
     button.addEventListener('click', () => {
       const hideSection = document.querySelector(`.${button.name}`);
       hideSection.style.display = 'none';
-      // run settings here
+      settings();
     });
   });
 };

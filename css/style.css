@@ -108,6 +108,13 @@ form {
   -webkit-tap-highlight-color: transparent;
 }
 
+.form__submit:disabled {
+  opacity: 0.25;
+  cursor: unset;
+  color: var(--dark);
+  background-color: var(--gray);
+}
+
 .game {
   display: none;
 }
