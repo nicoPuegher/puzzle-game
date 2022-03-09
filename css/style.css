@@ -108,6 +108,22 @@ form {
   -webkit-tap-highlight-color: transparent;
 }
 
+.game {
+  display: none;
+}
+
+header,
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game p {
+  margin-bottom: 0.5rem;
+}
+
 @media (min-width: 280px) and (max-width: 360px) {
   h1 {
     font-size: 2.6rem;
