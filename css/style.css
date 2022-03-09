@@ -49,6 +49,12 @@ h2 {
   line-height: 100%;
 }
 
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+  line-height: 100%;
+}
+
 p {
   font-size: 1.3rem;
   font-weight: 200;
@@ -72,13 +78,34 @@ button {
 
 .welcome,
 .won,
-.lost {
+.lost,
+form {
   text-align: center;
 }
 
 .won,
 .lost {
   display: none;
+}
+
+form {
+  display: none;
+  padding: 2rem;
+  border-radius: 0.7rem;
+  background-color: var(--complementary);
+}
+
+.mode,
+.size {
+  margin-bottom: 2rem;
+}
+
+.mode__selector,
+.size__selector {
+  font-size: 1.1rem;
+  width: 100%;
+  margin-bottom: 0.6rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (min-width: 280px) and (max-width: 360px) {
@@ -90,6 +117,10 @@ button {
     font-size: 1.4rem;
   }
 
+  h3 {
+    font-size: 1.3rem;
+  }
+
   p {
     font-size: 1.1rem;
   }
@@ -97,6 +128,16 @@ button {
   button {
     font-size: 1rem;
     padding: 0.8rem 1.7rem;
+  }
+
+  form {
+    padding: 2rem 0rem;
+  }
+
+  .mode__selector,
+  .size__selector {
+    width: 85%;
+    font-size: 1rem;
   }
 }
 
@@ -109,12 +150,21 @@ button {
     font-size: 2rem;
   }
 
+  h3 {
+    font-size: 1.8rem;
+  }
+
   p {
     font-size: 1.7rem;
   }
 
   button {
     font-size: 1.6rem;
+  }
+
+  .mode__selector,
+  .size__selector {
+    font-size: 1.2rem;
   }
 }
 

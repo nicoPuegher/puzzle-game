@@ -29,5 +29,41 @@
       <p>Please, select your game preferences</p>
       <button class="play" name="lost">Try Again</button>
     </section>
+
+    <form>
+      <div class="mode">
+        <h3>Game Mode</h3>
+        <div>
+          <button class="mode__selector">
+            <input class="mode__check" type="checkbox" name="image" />
+            Image
+          </button>
+          <button class="mode__selector">
+            <input class="mode__check" type="checkbox" name="numbers" />
+            Numbers
+          </button>
+        </div>
+      </div>
+
+      <div class="size">
+        <h3>Puzzle Size</h3>
+        <div>
+          <button class="size__selector">
+            <input class="size__check" type="checkbox" name="3" />
+            3x3
+          </button>
+          <button class="size__selector">
+            <input class="size__check" type="checkbox" name="4" />
+            4x4
+          </button>
+          <button class="size__selector">
+            <input class="size__check" type="checkbox" name="5" />
+            5x5
+          </button>
+        </div>
+      </div>
+
+      <button class="form__submit" type="submit">Start</button>
+    </form>
   </body>
 </html>
