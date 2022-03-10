@@ -6,9 +6,11 @@ let playerArr;
 const gameArrays = (mode, size) => {
   victoryArr = [];
 
-  for (let i = 0; i <= size; i += 1) {
+  const puzzleSize = size * size;
+
+  for (let i = 1; i <= puzzleSize; i += 1) {
     if (mode === 'image') {
-      victoryArr.push(`<img src="${imagePieces[i]}">`);
+      victoryArr.push({ id: i, img: `<img src="${imagePieces[i]}">` });
     }
 
     if (mode === 'numbers') {

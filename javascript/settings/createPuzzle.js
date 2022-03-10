@@ -1,5 +1,6 @@
 import createImage from './createImage.js';
 import gameArrays from '../helpers/gameArrays.js';
+import changeRem from '../helpers/changeRem.js';
 import blocksContent from '../logic/blocksContent.js';
 
 const game = document.querySelector('.game');
@@ -26,6 +27,7 @@ const createPuzzle = (mode, size) => {
   table.innerHTML = puzzle;
   movesLimit.innerHTML = 200;
 
+  changeRem(+size);
   mode === 'image' && createImage(+size);
   gameArrays(mode, +size);
   blocksContent(mode, +size);

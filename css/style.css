@@ -76,6 +76,11 @@ button {
   box-shadow: 0rem 0.25rem var(--black);
 }
 
+img {
+  display: block;
+  border-radius: 0.3rem;
+}
+
 .welcome,
 .won,
 .lost,
@@ -254,5 +259,9 @@ td {
   td:hover {
     color: var(--dark);
     background-color: var(--gray);
+  }
+
+  img:hover {
+    opacity: 0.5;
   }
 }

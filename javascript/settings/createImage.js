@@ -1,5 +1,3 @@
-import checkScreen from '../helpers/checkScreen.js';
-
 const canvas = document.createElement('canvas');
 const context = canvas.getContext('2d');
 const image = new Image();
@@ -11,30 +9,6 @@ const createImage = (size) => {
   imagePieces = [];
   const td = document.querySelector('td');
   const imageSize = image.width / size;
-
-  const tablesData = document.querySelectorAll('td');
-  const remSize = checkScreen();
-  let rem;
-
-  switch (size) {
-    case 3:
-      [rem] = remSize;
-      break;
-    case 4:
-      [, rem] = remSize;
-      break;
-    case 5:
-      [, , rem] = remSize;
-      break;
-    default:
-      break;
-  }
-
-  tablesData.forEach((element) => {
-    const data = element;
-    data.style.width = rem;
-    data.style.height = rem;
-  });
 
   canvas.width = td.offsetWidth;
   canvas.height = td.offsetHeight;
