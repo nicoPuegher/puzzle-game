@@ -1,8 +1,18 @@
 import checkScreen from '../helpers/checkScreen.js';
 
-const createImage = (size) => {
-  const tableData = document.querySelectorAll('td');
+const canvas = document.createElement('canvas');
+const context = canvas.getContext('2d');
+const image = new Image();
+image.src = '../../image/dog.jpg';
 
+let imagePieces;
+
+const createImage = (size) => {
+  imagePieces = [];
+  const td = document.querySelector('td');
+  const imageSize = image.width / size;
+
+  const tablesData = document.querySelectorAll('td');
   const remSize = checkScreen();
   let rem;
 
@@ -20,11 +30,35 @@ const createImage = (size) => {
       break;
   }
 
-  tableData.forEach((element) => {
+  tablesData.forEach((element) => {
     const data = element;
     data.style.width = rem;
     data.style.height = rem;
   });
+
+  canvas.width = td.offsetWidth;
+  canvas.height = td.offsetHeight;
+
+  for (let row = 0; row < size; ++row) {
+    for (let column = 0; column < size; ++column) {
+      context.drawImage(
+        image,
+        imageSize * column,
+        imageSize * row,
+        imageSize,
+        imageSize,
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
+
+      imagePieces.push(canvas.toDataURL());
+    }
+  }
+
+  imagePieces.splice(imagePieces[0], 0, '');
 };
 
 export default createImage;
+export { imagePieces };

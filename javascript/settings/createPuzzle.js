@@ -24,7 +24,7 @@ const createPuzzle = (mode, size) => {
   table.innerHTML = puzzle;
   movesLimit.innerHTML = 200;
 
-  mode === 'image' && createImage(size);
+  mode === 'image' && createImage(+size);
 
   // add blocks content here
   // add block events here
