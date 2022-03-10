@@ -2,6 +2,7 @@ import createImage from './createImage.js';
 import gameArrays from '../helpers/gameArrays.js';
 import changeRem from '../helpers/changeRem.js';
 import blocksContent from '../logic/blocksContent.js';
+import blockEvents from '../events/blockEvents.js';
 
 const game = document.querySelector('.game');
 const table = document.querySelector('.game__table');
@@ -31,9 +32,7 @@ const createPuzzle = (mode, size) => {
   mode === 'image' && createImage(+size);
   gameArrays(mode, +size);
   blocksContent(mode, +size);
-
-  // add blocks content here
-  // add block events here
+  blockEvents(+size);
 };
 
 export default createPuzzle;
