@@ -1,3 +1,5 @@
+import createImage from './createImage.js';
+
 const game = document.querySelector('.game');
 const table = document.querySelector('.game__table');
 const movesLimit = document.querySelector('.game__limit');
@@ -22,7 +24,8 @@ const createPuzzle = (mode, size) => {
   table.innerHTML = puzzle;
   movesLimit.innerHTML = 200;
 
-  // createImage here if needed
+  mode === 'image' && createImage(size);
+
   // add blocks content here
   // add block events here
 };
