@@ -1,3 +1,5 @@
+import validateForm from './validateForm.js';
+
 const modeSelectors = document.querySelectorAll('.mode__selector');
 const sizeSelectors = document.querySelectorAll('.size__selector');
 
@@ -13,7 +15,7 @@ const selectorLogic = (selector, selectorGroup) => {
   selector.classList.add('active');
   currentInput.checked = true;
 
-  // validate form here
+  validateForm();
 };
 
 const identifySelector = (selector) => {

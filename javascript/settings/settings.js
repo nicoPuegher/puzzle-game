@@ -1,4 +1,4 @@
-import identifySelector from './identifySelector.js';
+import identifySelector from '../helpers/identifySelector.js';
 
 const form = document.querySelector('form');
 const inputs = document.querySelectorAll('.mode__check, .size__check');
