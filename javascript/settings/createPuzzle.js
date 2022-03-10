@@ -1,4 +1,6 @@
 import createImage from './createImage.js';
+import gameArrays from '../helpers/gameArrays.js';
+import blocksContent from '../logic/blocksContent.js';
 
 const game = document.querySelector('.game');
 const table = document.querySelector('.game__table');
@@ -25,6 +27,8 @@ const createPuzzle = (mode, size) => {
   movesLimit.innerHTML = 200;
 
   mode === 'image' && createImage(+size);
+  gameArrays(mode, +size);
+  blocksContent(mode, +size);
 
   // add blocks content here
   // add block events here
