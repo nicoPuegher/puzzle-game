@@ -1,12 +1,12 @@
 let blankPosition;
 let rowEmptyBlock;
 
-const updateRowEmptyBlock = (newRow) => {
-  rowEmptyBlock = newRow.parentElement;
+const updateRowEmptyBlock = (block) => {
+  rowEmptyBlock = block.parentElement;
 };
 
 const updateBlankPosition = (block) => {
-  blankPosition = block.id;
+  blankPosition = +block.id;
   updateRowEmptyBlock(block);
 };
 
