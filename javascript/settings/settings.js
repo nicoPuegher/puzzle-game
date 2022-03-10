@@ -1,4 +1,6 @@
 import identifySelector from '../helpers/identifySelector.js';
+import createPuzzle from './createPuzzle.js';
+import { selectedMode, selectedSize } from '../helpers/validateForm.js';
 
 const form = document.querySelector('form');
 const inputs = document.querySelectorAll('.mode__check, .size__check');
@@ -25,7 +27,7 @@ const settings = () => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     form.style.display = 'none';
-    // create puzzle here
+    createPuzzle(selectedMode, selectedSize);
   });
 };
 
