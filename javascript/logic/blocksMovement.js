@@ -1,5 +1,6 @@
-import checkRow from '../helpers/checkRow.js';
+import countDown from './countDown.js';
 import updateBlankPosition, { blankPosition } from './updateBlankPosition.js';
+import checkRow from '../helpers/checkRow.js';
 
 const tablesData = document.getElementsByTagName('td');
 
@@ -7,7 +8,7 @@ const movement = (id) => {
   tablesData[blankPosition].innerHTML = tablesData[id].innerHTML;
   tablesData[id].innerHTML = '';
   updateBlankPosition(tablesData[id]);
-  // do count down here
+  countDown();
 };
 
 const blocksMovement = (id, size) => {
