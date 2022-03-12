@@ -20,11 +20,11 @@ const gameArrays = (mode, size) => {
 
   playerArr = victoryArr.slice();
 
-  for (let i = playerArr.length - 1; i > 0; i -= 1) {
-    const random = Math.floor(Math.random() * (i + 1));
-    [playerArr[i], playerArr[random]] = [playerArr[random], playerArr[i]];
-  }
+  // for (let i = playerArr.length - 1; i > 0; i -= 1) {
+  //   const random = Math.floor(Math.random() * (i + 1));
+  //   [playerArr[i], playerArr[random]] = [playerArr[random], playerArr[i]];
+  // }
 };
 
 export default gameArrays;
-export { playerArr };
+export { playerArr, victoryArr };

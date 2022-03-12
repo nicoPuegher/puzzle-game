@@ -1,6 +1,7 @@
 import countDown from './countDown.js';
 import updateBlankPosition, { blankPosition } from './updateBlankPosition.js';
 import checkRow from '../helpers/checkRow.js';
+import checkWin from './checkWin.js';
 
 const tablesData = document.getElementsByTagName('td');
 
@@ -11,7 +12,7 @@ const movement = (id) => {
   countDown();
 };
 
-const blocksMovement = (id, size) => {
+const blocksMovement = (id, mode, size) => {
   const valid = checkRow(id);
 
   let move = blankPosition - id;
@@ -32,7 +33,7 @@ const blocksMovement = (id, size) => {
     movement(id);
   }
 
-  // check win here
+  checkWin(mode, size);
 };
 
 export default blocksMovement;

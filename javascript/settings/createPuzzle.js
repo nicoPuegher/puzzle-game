@@ -32,7 +32,7 @@ const createPuzzle = (mode, size) => {
   mode === 'image' && createImage(+size);
   gameArrays(mode, +size);
   blocksContent(mode, +size);
-  blockEvents(+size);
+  blockEvents(mode, +size);
 };
 
 export default createPuzzle;
