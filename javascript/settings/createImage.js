@@ -1,7 +1,7 @@
 const canvas = document.createElement('canvas');
 const context = canvas.getContext('2d');
 const image = new Image();
-image.src = '../../image/dog.jpg';
+image.src = 'image/dog.jpg';
 
 let imagePieces;
 
