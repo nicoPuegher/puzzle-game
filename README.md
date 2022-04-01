@@ -1,8 +1,12 @@
 # JavaScript Puzzle Game
 
-### This is a fully responsive javascript game where you can play with an image or numbers.
+### This is a fully responsive JavaScript game where you can play with an image or numbers.
 
 <br />
+
+## Note
+
+This project is also built in ReactJS and can be found here: [ReactJS Puzzle Game](https://github.com/nicoPuegher/puzzle-game-react) 
 
 ## Table of contents
 
