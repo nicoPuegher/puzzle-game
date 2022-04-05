@@ -2,11 +2,9 @@
 
 ### This is a fully responsive JavaScript game where you can play with an image or numbers.
 
-<br />
-
-## Note
-
 This project is also built in ReactJS and can be found here: [ReactJS Puzzle Game](https://github.com/nicoPuegher/puzzle-game-react) 
+
+<br />
 
 ## Table of contents
 
@@ -16,7 +14,7 @@ This project is also built in ReactJS and can be found here: [ReactJS Puzzle Gam
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Notes](#notes)
+  - [Note](#note)
 
 <br />
 
